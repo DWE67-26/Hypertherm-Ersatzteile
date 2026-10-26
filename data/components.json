@@ -1,0 +1,507 @@
+{
+  "categories": [
+    "Bohrkörper",
+    "Bohrspitzen",
+    "Fräser",
+    "Wendeplattenfräser",
+    "Planfräser",
+    "Wendeschneidplatten"
+  ],
+  "components": [
+    {
+      "id": "id_aufn_080",
+      "catalog": "KE-KTFS080R05SS10M",
+      "name": "Bohrkörper Ø 8,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_100",
+      "catalog": "KE-KTFS100R05SS12M",
+      "name": "Bohrkörper Ø 10,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_125",
+      "catalog": "KE-KSEM125R5WN16M",
+      "name": "Bohrkörper Ø 12,5mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_140",
+      "catalog": "KE-KSEM140R5WN16M",
+      "name": "Bohrkörper Ø 14,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_150",
+      "catalog": "KE-KSEM150R5WN20M",
+      "name": "Bohrkörper Ø 15,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_165",
+      "catalog": "KE-KSEM165R5WN20M",
+      "name": "Bohrkörper Ø 16,5mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_170",
+      "catalog": "KE-KSEM170R5WN20M",
+      "name": "Bohrkörper Ø 17,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_180",
+      "catalog": "KE-KSEM180R5WN20M",
+      "name": "Bohrkörper Ø 18,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_200",
+      "catalog": "KE-KSEM200R5WN25M",
+      "name": "Bohrkörper Ø 20,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_220",
+      "catalog": "KE-KSEM220R5WN25M",
+      "name": "Bohrkörper Ø 22,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_230",
+      "catalog": "KE-KSEM230R5WN25M",
+      "name": "Bohrkörper Ø 23,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_250",
+      "catalog": "KE-KSEM250R5WN32M",
+      "name": "Bohrkörper Ø 25,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_260",
+      "catalog": "KE-KSEM260R3WN32M",
+      "name": "Bohrkörper Ø 26,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_280",
+      "catalog": "KE-KSEM280R3WN32M",
+      "name": "Bohrkörper Ø 28,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_282",
+      "catalog": "KE-KSEM281R5WN32M",
+      "name": "Bohrkörper Ø 28,2mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_300",
+      "catalog": "KE-KSEM300R5WN32M",
+      "name": "Bohrkörper Ø 30,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_320",
+      "catalog": "KE-KSEM320R3WN32M",
+      "name": "Bohrkörper Ø 32,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_aufn_380",
+      "catalog": "KE-KSEM380R3WN32M",
+      "name": "Bohrkörper Ø 38,0mm",
+      "category": "Bohrkörper",
+      "image": "Bohrkörper.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 3 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
+      }
+    },
+    {
+      "id": "id_spitze_080",
+      "catalog": "KE-KTFST08000HPLMKCMS15",
+      "name": "Bohrspitze Ø 8,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_100",
+      "catalog": "KE-KTFST10000HPLMKCMS15",
+      "name": "Bohrspitze Ø 10,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_125",
+      "catalog": "KE-KSEM1250HPGMKCPM45",
+      "name": "Bohrspitze Ø 12,5mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_140",
+      "catalog": "KE-KSEM1400HPGMKCPM45",
+      "name": "Bohrspitze Ø 14,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_150",
+      "catalog": "KE-KSEM1500HPGMKCPM45",
+      "name": "Bohrspitze Ø 15,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_165",
+      "catalog": "KE-KSEM1650HPGMKCPM45",
+      "name": "Bohrspitze Ø 16,5mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_170",
+      "catalog": "KE-KSEM1700HPGMKCPM45",
+      "name": "Bohrspitze Ø 17,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_180",
+      "catalog": "KE-KSEM1800HPGMKCPM45",
+      "name": "Bohrspitze Ø 18,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_200",
+      "catalog": "KE-KSEM2000HPGMKCPM45",
+      "name": "Bohrspitze Ø 20,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_220",
+      "catalog": "KE-KSEM2200HPGMKCPM45",
+      "name": "Bohrspitze Ø 22,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_230",
+      "catalog": "KE-KSEM2300HPGMKCPM45",
+      "name": "Bohrspitze Ø 23,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_250",
+      "catalog": "KE-KSEM2500HPGMKCPM45",
+      "name": "Bohrspitze Ø 25,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_260",
+      "catalog": "KE-KSEM2600HPGMKCPM45",
+      "name": "Bohrspitze Ø 26,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_280",
+      "catalog": "KE-KSEM2800HPGMKCPM45",
+      "name": "Bohrspitze Ø 28,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_282",
+      "catalog": "KE-KSEM2818HPGMKCPM45",
+      "name": "Bohrspitze Ø 28,2mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_300",
+      "catalog": "KE-KSEM3000HPGMKCPM45",
+      "name": "Bohrspitze Ø 30,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_320",
+      "catalog": "KE-KSEM3200HPGMKC7315",
+      "name": "Bohrspitze Ø 32,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_spitze_380",
+      "catalog": "KE-KSEM3800HPGMKC7315",
+      "name": "Bohrspitze Ø 38,0mm",
+      "category": "Bohrspitzen",
+      "image": "Bohrspitze.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 5 }
+      }
+    },
+    {
+      "id": "id_fräser-800",
+      "catalog": "KE-RUDC0800B3BN-KCPM15",
+      "name": "Fräser Ø 8,0mm",
+      "category": "Fräser",
+      "image": "Fräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_fräser-1000",
+      "catalog": "KE-RUDC0800B4BN-KCPM15",
+      "name": "Fräser Ø 10,0mm",
+      "category": "Fräser",
+      "image": "Fräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_fräser-1200",
+      "catalog": "KE-RUDC1200B4BN-KCPM15",
+      "name": "Fräser Ø 12,0mm",
+      "category": "Fräser",
+      "image": "Fräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_fräser-1400",
+      "catalog": "KE-RUDC1400B4BN-KCPM15",
+      "name": "Fräser Ø 14,0mm",
+      "category": "Fräser",
+      "image": "Fräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_fräser-1800",
+      "catalog": "KE-RUDC1800B4BN-KCPM15",
+      "name": "Fräser Ø 18,0mm",
+      "category": "Fräser",
+      "image": "Fräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_wfräser-3500",
+      "catalog": "KE-25Y03R035M12SWP05",
+      "name": "Fräser Ø 25,0mm",
+      "category": "Wendeplattenfräser",
+      "image": "Wendeplattenfräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "id_pfräser-6300",
+      "catalog": "KE-KSSM88D063Z05SN10",
+      "name": "Fräser Ø 63,0mm",
+      "category": "Planfräser",
+      "image": "Planfräser.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 1 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "wsp_snpj",
+      "catalog": "KE-SNPJ10T308SNGD KCPM40",
+      "name": "Wendeschneidplatten KSSM8+",
+      "category": "Wendeschneidplatten",
+      "image": "Wendeschneidplatten.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    },
+    {
+      "id": "wsp_snpj2",
+      "catalog": "KE-WPMT05X315ZZERGP KC522M",
+      "name": "Wendeschneidplatten  KSWM",
+      "category": "Wendeschneidplatten",
+      "image": "Wendeschneidplatten2.jpg",
+      "stocks": {
+        "FICEP Gemini": { "actual": 0, "target": 5 },
+        "FICEP Säge-Bohren": { "actual": 0, "target": 0 }
+      }
+    }
+  ]
+}

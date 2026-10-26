@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verschleißteile Werkzeugverwaltung | FICEP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>Schrempp Werkzeugverwaltung </h1>
+            <small>FICEP Anlagen</small>
+        </div>
+
+        <div class="machine-selector-wrap" id="dash-machine-wrap">
+            <label for="dash-machine-select" style="color: #94A3B8; font-size: 0.85rem; font-weight: 600;">Aktive
+                Maschine:</label>
+            <select id="dash-machine-select" class="form-control"
+                style="max-width: 220px; background-color: #1A3E5C; color: #FFF; border-color: #334155;">
+                <option value="FICEP Gemini">FICEP Gemini</option>
+                <option value="FICEP Säge-Bohren">FICEP Säge-Bohren</option>
+            </select>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-btn active" data-view="dashboard">Lagerübersicht</button>
+            <button class="nav-btn" data-view="admin">Admin-Bereich</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- LAGERÜBERSICHT / DASHBOARD -->
+        <section id="dashboard" class="view-section active">
+            <div class="dashboard-grid">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h2 id="dashboard-title">Bestand: FICEP Gemini</h2>
+                        <select id="dash-category-filter" class="form-control" style="max-width: 200px;">
+                            <option value="ALL">Alle Obergruppen</option>
+                        </select>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Bild</th>
+                                    <th>Bestellnummer</th>
+                                    <th>Bezeichnung</th>
+                                    <th>Ist</th>
+                                    <th>Soll</th>
+                                    <th>Differenz</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dashboard-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- BESTELLLISTE PANEL -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Bedarfs-Bestellliste</h2>
+                    </div>
+                    <div class="form-group">
+                        <label for="order-email">Empfänger-E-Mail (variabel)</label>
+                        <input type="email" id="order-email" class="form-control"
+                            value="d.waeldele@stahlbau-schrempp.de">
+                    </div>
+                    <div class="order-box" id="order-preview">Kein Fehlbestand vorhanden.</div>
+                    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                        <button class="btn btn-primary" id="btn-copy">In Zwischenablage kopieren</button>
+                        <button class="btn btn-secondary" id="btn-email">Als E-Mail senden</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ADMIN BEREICH -->
+        <section id="admin" class="view-section">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
+
+                <!-- KOMPONENTEN CRUD -->
+                <div class="card">
+                    <h2 id="form-title" style="margin-bottom:1rem;">Komponente hinzufügen/bearbeiten</h2>
+                    <form id="component-form">
+                        <input type="hidden" id="comp-id">
+
+                        <div
+                            style="background: #F8FAFC; border: 1px solid var(--border); padding: 0.75rem; border-radius: var(--radius); margin-bottom: 1rem;">
+                            <h4 style="font-size: 0.85rem; color: var(--primary); margin-bottom: 0.5rem;">1. Allgemeine
+                                Stammdaten</h4>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="comp-catalog">Bestellnummer (Catalog No.)</label>
+                                    <input type="text" id="comp-catalog" class="form-control" required
+                                        placeholder="z.B. KTFS1200H3 KC7315">
+                                </div>
+                                <div class="form-group">
+                                    <label for="comp-name">Bezeichnung</label>
+                                    <input type="text" id="comp-name" class="form-control" required
+                                        placeholder="z.B. Bohrspitze 12mm">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="comp-category">Obergruppe</label>
+                                    <select id="comp-category" class="form-control" required></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comp-image">Bild-Dateiname</label>
+                                    <input type="text" id="comp-image" class="form-control"
+                                        placeholder="z.B. spitze12.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="border: 1px dashed var(--accent); padding: 0.75rem; border-radius: var(--radius); margin-bottom: 1rem;">
+                            <h4 style="font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem;">2.
+                                Maschinenspezifische Bestände</h4>
+
+                            <div
+                                style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);">
+                                <span style="font-size: 0.8rem; font-weight: bold; color: var(--primary);">FICEP
+                                    Gemini</span>
+                                <div class="form-row" style="margin-top: 0.25rem;">
+                                    <div class="form-group" style="margin-bottom:0;">
+                                        <label for="comp-gemini-actual">Ist-Anzahl</label>
+                                        <input type="number" id="comp-gemini-actual" class="form-control" min="0"
+                                            value="0" required>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom:0;">
+                                        <label for="comp-gemini-target">Soll-Anzahl</label>
+                                        <input type="number" id="comp-gemini-target" class="form-control" min="0"
+                                            value="0" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span style="font-size: 0.8rem; font-weight: bold; color: var(--primary);">FICEP
+                                    Säge-Bohren</span>
+                                <div class="form-row" style="margin-top: 0.25rem;">
+                                    <div class="form-group" style="margin-bottom:0;">
+                                        <label for="comp-saege-actual">Ist-Anzahl</label>
+                                        <input type="number" id="comp-saege-actual" class="form-control" min="0"
+                                            value="0" required>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom:0;">
+                                        <label for="comp-saege-target">Soll-Anzahl</label>
+                                        <input type="number" id="comp-saege-target" class="form-control" min="0"
+                                            value="0" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+                            <button type="submit" class="btn btn-primary">Speichern</button>
+                            <button type="button" id="btn-cancel-edit" class="btn btn-outline">Abbrechen</button>
+                        </div>
+                    </form>
+
+                    <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border);">
+
+                    <h3>Komponenten-Katalog (Gesamt)</h3>
+                    <div class="table-container" style="margin-top: 0.5rem;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Bestellnummer</th>
+                                    <th>Name</th>
+                                    <th>Obergruppe</th>
+                                    <th>Bestand (G / S-B)</th>
+                                    <th>Aktionen</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-components-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- OBERGRUPPEN & SYSTEM CONTROL -->
+                <div>
+                    <div class="card">
+                        <h2>Obergruppen (Kategorien)</h2>
+                        <form id="category-form" style="display: flex; gap: 0.5rem; margin: 1rem 0;">
+                            <input type="text" id="cat-name" class="form-control" placeholder="Neue Obergruppe..."
+                                required>
+                            <button type="submit" class="btn btn-primary">Hinzufügen</button>
+                        </form>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th style="width: 80px;">Aktion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-categories-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- SYSTEM-WARTUNG CARD MIT JSON DATEI-EX/IMPORT -->
+                    <div class="card" style="border-top: 4px solid var(--danger);">
+                        <h2>System-Wartung & Datensicherung</h2>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                            Verwalte deine Daten lokal oder sichere sie extern ab.
+                        </p>
+
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                            <!-- JSON Export -->
+                            <button class="btn btn-secondary" id="btn-export-json">Daten als JSON exportieren
+                                (Backup)</button>
+
+                            <!-- JSON Import -->
+                            <button class="btn btn-outline" id="btn-import-trigger">JSON-Datei importieren</button>
+                            <input type="file" id="json-file-input" accept=".json" style="display: none;">
+
+                            <!-- System Reset -->
+                            <button class="btn btn-danger" id="btn-reset-data" style="margin-top: 0.5rem;">Daten
+                                zurücksetzen (Reset)</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div class="toast" id="toast">Aktion ausgeführt!</div>
+
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>

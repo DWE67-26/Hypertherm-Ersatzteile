@@ -1,0 +1,506 @@
+:root {
+  --primary: #0F2537;
+  --primary-light: #1A3E5C;
+  --accent: #E35205; /* Kennametal Orange */
+  --accent-hover: #C54502;
+  --bg: #F4F6F9;
+  --card-bg: #FFFFFF;
+  --text: #1E293B;
+  --text-muted: #64748B;
+  --border: #CBD5E1;
+  --success: #16A34A;
+  --warning: #D97706;
+  --danger: #DC2626;
+  --radius: 8px;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Header & Navigation */
+header {
+  background-color: var(--primary);
+  color: #FFF;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand h1 { 
+  font-size: 1.25rem; 
+  font-weight: 700; 
+}
+
+.brand small { 
+  color: #94A3B8; 
+}
+
+.nav-tabs { 
+  display: flex; 
+  gap: 0.5rem; 
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #CBD5E1;
+  padding: 0.6rem 1.2rem; /* Leicht vergrößert für Touch-Bedienung */
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #FFF;
+}
+
+/* Maschinenauswahl im Header */
+.machine-selector-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main { 
+  flex: 1; 
+  max-width: 1400px; 
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 1.5rem; 
+}
+
+.view-section { 
+  display: none; 
+}
+
+.view-section.active { 
+  display: block; 
+}
+
+/* Dashboard-Layout (PC / Tablet) */
+.dashboard-grid { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  gap: 1.5rem; 
+}
+
+.card { 
+  background: var(--card-bg); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  padding: 1.25rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.card-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 1rem; 
+  flex-wrap: wrap; 
+  gap: 0.75rem; 
+}
+
+/* Tabellen-Stile (PC-Ansicht) */
+.table-container { 
+  overflow-x: auto; 
+}
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  text-align: left; 
+  font-size: 0.95rem; 
+}
+
+th, td { 
+  padding: 0.75rem; 
+  border-bottom: 1px solid var(--border); 
+  vertical-align: middle; 
+}
+
+th { 
+  background-color: #F8FAFC; 
+  color: var(--primary); 
+  font-weight: 600; 
+  font-size: 0.8rem; 
+  text-transform: uppercase; 
+}
+
+.comp-img { 
+  width: 60px;          /* Auf dem PC leicht vergrößert für bessere Sichtbarkeit */
+  height: 60px; 
+  object-fit: contain;  /* ⚡ Garantiert: Das Bild wird komplett angezeigt, nichts wird abgeschnitten! */
+  background: #FFFFFF;  /* Weißer Hintergrund, falls das Bild schmal oder hochkant ist */
+  border: 1px solid var(--border); /* Dezenter Rahmen um die Box */
+  border-radius: 6px; 
+  padding: 2px;         /* Kleiner Sicherheitsabstand zum Rahmen */
+}
+
+/* Status-Badges */
+.badge { 
+  display: inline-block; 
+  padding: 0.25rem 0.6rem; 
+  border-radius: 999px; 
+  font-size: 0.75rem; 
+  font-weight: 600; 
+  text-align: center;
+}
+
+.badge-ok { background-color: #DCFCE7; color: #15803D; }
+.badge-low { background-color: #FEF3C7; color: #B45309; }
+.badge-critical { background-color: #FEE2E2; color: #B91C1C; }
+
+/* Formulare & Eingaben */
+.form-group { 
+  margin-bottom: 1rem; 
+}
+
+.form-group label { 
+  display: block; 
+  font-size: 0.85rem; 
+  font-weight: 600; 
+  margin-bottom: 0.35rem; 
+}
+
+.form-control { 
+  width: 100%; 
+  padding: 0.7rem 0.85rem; /* Mehr Padding für mobile Tastaturen */
+  border: 1px solid var(--border); 
+  border-radius: var(--radius); 
+  font-size: 1rem; /* Mindestens 16px verhindert Auto-Zoom bei iOS */
+}
+
+.form-row { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1rem; 
+}
+
+/* Buttons */
+.btn { 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 0.5rem; 
+  padding: 0.75rem 1.2rem; /* Größere Touch-Fläche für Finger */
+  border-radius: var(--radius); 
+  font-weight: 600; 
+  cursor: pointer; 
+  border: none; 
+  font-size: 0.9rem; 
+  transition: background 0.2s;
+}
+
+.btn-primary { background-color: var(--accent); color: #FFF; }
+.btn-primary:hover { background-color: var(--accent-hover); }
+.btn-secondary { background-color: var(--primary); color: #FFF; }
+.btn-outline { background-color: transparent; border: 1px solid var(--border); color: var(--text); }
+.btn-danger { background-color: var(--danger); color: #FFF; }
+.btn-sm { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+
+/* Vorschau-Box */
+.order-box { 
+  background: #F8FAFC; 
+  border: 1px dashed var(--border); 
+  border-radius: var(--radius); 
+  padding: 1rem; 
+  font-family: monospace; 
+  font-size: 0.85rem; 
+  white-space: pre-wrap; 
+  max-height: 300px; 
+  overflow-y: auto; 
+  margin-bottom: 1rem; 
+}
+
+/* Toast Benachrichtigung */
+.toast { 
+  position: fixed; 
+  bottom: 1.5rem; 
+  right: 1.5rem; 
+  left: 1.5rem; /* Zentriert auf Smartphones */
+  text-align: center;
+  background: var(--primary); 
+  color: #FFF; 
+  padding: 1rem; 
+  border-radius: var(--radius); 
+  opacity: 0; 
+  transition: opacity 0.3s, transform 0.3s; 
+  transform: translateY(10px);
+  z-index: 1000; 
+  pointer-events: none; 
+}
+
+.toast.show { 
+  opacity: 1; 
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   📱 MOBILE OPTIMIERUNGEN (Smartphones & kleine Bildschirme bis 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .machine-selector-wrap {
+    width: 100%;
+    justify-content: space-between;
+    background: rgba(255,255,255,0.05);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+  }
+
+  .nav-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Buttons teilen sich die Breite */
+    width: 100%;
+  }
+
+  .nav-btn {
+    text-align: center;
+  }
+
+  main {
+    padding: 0.75rem;
+  }
+
+  .dashboard-grid { 
+    grid-template-columns: 1fr; /* Keine Spalten mehr auf dem Handy */
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-header select {
+    max-width: 100% !important;
+    width: 100%; /* Filter füllt die Breite aus */
+    margin-top: 0.5rem;
+  }
+
+  /* ⚡ DER TRICK: Tabelle in moderne Cards umwandeln */
+  table, thead, tbody, th, td, tr { 
+    display: block; 
+  }
+  
+  thead { 
+    display: none; /* Verberge die Tabellen-Überschriften */
+  }
+  
+  /* ==========================================================================
+   📱 KORREKTUR FÜR DIE BESTELLNUMMER (In der @media (max-width: 768px) Schleife)
+   ========================================================================== */
+@media (max-width: 768px) {
+  
+   tr {
+    display: flex;
+    flex-direction: column;
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* ⚡ DER TRICK: Wir machen die erste Zelle zu einer Flex-Box, die Bild & Text nebeneinander zwingt */
+  td:first-child {
+    display: flex !important;
+    align-items: center;
+    gap: 0.75rem;               /* Abstand zwischen Bild und Bestellnummer */
+    width: 100% !important;     /* Nutzt die volle Breite der Karte */
+    border-bottom: 2px solid var(--border); /* Trennlinie nach unten */
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Das kompakte Bild links */
+  td:first-child .comp-img {
+    width: 60px !important;
+    height: 60px !important;
+    min-width: 60px;            /* Verhindert, dass das Bild zusammengedrückt wird */
+    object-fit: contain;
+    background: #FFFFFF;
+  }
+
+  /* ⚡ NEU: Die Bestellnummer sitzt JETZT direkt im HTML-Fluss neben dem Bild */
+  td:nth-child(2) {
+    display: block !important;
+    flex: 1;                    /* Füllt den gesamten restlichen Platz rechts neben dem Bild aus */
+    font-size: 1rem !important; /* Maximal groß und lesbar */
+    font-weight: 800 !important;   /* Extra fett */
+    color: var(--primary);
+    line-height: 1.2;
+    word-break: break-all;      /* Erlaubt Zeilenumbruch bei ultralangen Kennametal-Codes */
+    border-bottom: none !important; /* Keine eigene Trennlinie mehr nötig */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Alle nachfolgenden Infofelder (Ist, Soll, Differenz, Status) untereinander */
+td:nth-child(2)::before { content: "Bezeichnung: "; font-weight: 600; color: var(--text-muted); }
+  td:nth-child(3) {
+    display: flex !important;
+    justify-content: space-between; /* Text links, Buttons rechts */
+    align-items: center !important;
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+  }
+
+  /* ⚡ Zwingt den Zähler, auf dem Handy eine unzerbrechliche Zeile zu bilden */
+  td:nth-child(3) .stock-counter {
+    display: inline-flex !important; /* Hält alles in einer Zeile */
+    flex-direction: row !important;  /* Garantiert die waagerechte Ausrichtung */
+    align-items: center !important;
+    justify-content: center !important;
+    background: #E2E8F0;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    width: auto !important;          /* Verhindert das Strecken in die Breite */
+    min-width: 120px;                /* Gibt dem Counter eine stabile Mindestgröße */
+  }
+
+  /* Die Tipp-Tasten (+ und -) für dicke Finger optimieren */
+  td:nth-child(3) .btn-stock-adjust {
+    width: 44px !important;          /* Perfekte Touch-Größe für den Daumen */
+    height: 44px !important;
+    font-size: 1.4rem !important;    /* Zeichen gut sichtbar machen */
+    font-weight: bold !important;
+    background: #CBD5E1;
+    border: none;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Der angezeigte Ist-Wert in der Mitte */
+  td:nth-child(3) .stock-display-value {
+    font-size: 1.2rem !important;    /* Zahl deutlich lesbar */
+    font-weight: 800 !important;     /* Fett gedruckt */
+    padding: 0 0.8rem !important;
+    min-width: 40px;                 /* Verhindert das Springen bei zweistelligen Zahlen */
+    text-align: center;
+    color: var(--primary);
+  }
+td:nth-child(4)::before { content: "Soll-Bestand: "; font-weight: 600; color: var(--text-muted); }
+td:nth-child(5)::before { content: "Differenz: "; font-weight: 600; color: var(--text-muted); }
+td:nth-child(6)::before { content: "Status: "; font-weight: 600; color: var(--text-muted); }
+}
+/* Vergrößert die Bestellnummer in der Tabellenansicht am PC */
+table td strong {
+  font-size: 1.15rem;       /* Größere Schriftart auf dem Monitor */
+  font-weight: 800;         /* Extra fett */
+  color: var(--primary);    /* Dunkelblau für starken Kontrast */
+  letter-spacing: 0.5px;    /* Leicht erhöhter Buchstabenabstand für bessere Lesbarkeit */
+}
+
+  /* Buttons im Admin-Bereich untereinander stapeln */
+  .btn {
+    width: 100%; /* Buttons gehen über die volle Breite */
+  }
+
+  td div style, td div {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .toast {
+    right: 1rem;
+    left: 1rem;
+  }
+}
+/* Styling für die neuen Schnell-Buchungs-Buttons */
+.stock-counter {
+  display: inline-flex;
+  align-items: center;
+  background: #F1F5F9;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.btn-stock-adjust {
+  background: #E2E8F0;
+  border: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.btn-stock-adjust:hover {
+  background: #CBD5E1;
+}
+
+.btn-stock-adjust:active {
+  background: var(--border);
+}
+
+.stock-display-value {
+  padding: 0 0.75rem;
+  font-weight: 700;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Mobile Layout-Anpassung für den Counter */
+@media (max-width: 768px) {
+  td:nth-child(5) {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-top: 1px dashed var(--border);
+    border-bottom: 1px dashed var(--border);
+  }
+  
+  .stock-counter {
+    width: auto;
+  }
+  
+  .btn-stock-adjust {
+    width: 40px; /* Größere Klickfläche auf dem Handy */
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .stock-display-value {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
