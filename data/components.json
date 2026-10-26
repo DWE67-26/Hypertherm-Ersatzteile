@@ -13,7 +13,7 @@
       "catalog": "KE-KTFS080R05SS10M",
       "name": "Bohrkörper Ø 8,0mm",
       "category": "Bohrkörper",
-      "image": "Bohrkörper.jpg",
+      "image": "assets/images/Bohrkörper.jpg",
       "stocks": {
         "FICEP Gemini": { "actual": 0, "target": 3 },
         "FICEP Säge-Bohren": { "actual": 0, "target": 3 }
